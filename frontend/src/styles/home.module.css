@@ -1,0 +1,101 @@
+/* ✅ 메인 페이지 전체 컨테이너 */
+.mainContainer {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background: url("/img/main.png") no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ✅ 메인 타이틀 */
+.titleContainer {
+    text-align: center;
+    margin-top: 80px;
+}
+
+.mainText {
+    font-size: 4vw;
+    font-weight: bold;
+    background: linear-gradient(90deg, #7D49FF 0%, #A020F0 100%); /* 🔥 보라색 계열 */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.subText {
+    font-size: 2vw;
+    color: #ffffff;
+    margin: 10px 0;
+    text-transform: uppercase;
+}
+
+.brandName {
+    font-size: 3vw;
+    font-weight: bold;
+    color: #A020F0; /* 보라색 */
+}
+
+/* ✅ 버튼 스타일 */
+.buttonContainer {
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+/* 🔥 버튼 색상 보라색 계열로 변경 */
+.buttonBlue,
+.buttonGreen {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border-radius: 12px;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.2s ease;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* ✅ 보라색 버튼 (지금 둘러보기) */
+.buttonBlue {
+    background: linear-gradient(270deg, #7D49FF, #A020F0);
+}
+
+.buttonBlue:hover {
+    background: linear-gradient(270deg, #6A5ACD, #8A2BE2);
+}
+
+/* ✅ 보라색 버튼 (내 프로젝트 시작하기) */
+.buttonGreen {
+    background: linear-gradient(270deg, #7D49FF, #A020F0);
+}
+
+.buttonGreen:hover {
+    background: linear-gradient(270deg, #6A5ACD, #8A2BE2);
+}
+
+/* ✅ 반응형 디자인 */
+@media (max-width: 768px) {
+    .mainText {
+        font-size: 6vw;
+    }
+    
+    .subText {
+        font-size: 3vw;
+    }
+
+    .brandName {
+        font-size: 5vw;
+    }
+
+    .buttonContainer {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .buttonBlue, .buttonGreen {
+        font-size: 1rem;
+        padding: 12px 24px;
+    }
+}
