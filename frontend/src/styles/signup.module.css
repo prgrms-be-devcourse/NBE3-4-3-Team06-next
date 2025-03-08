@@ -1,0 +1,119 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+  }
+  
+  .logo {
+    font-family: "Jersey 25", sans-serif;
+    font-size: 30px;
+    background: linear-gradient(90deg, #4AC7FA 0%, #E649F5 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 20px;
+  }
+  
+  /* ✅ form 태그를 전역 선택자로 쓰면 안 됨! */
+  .signupForm {
+    background: #FFFFFF;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    width: 40%;
+    min-width: 344px;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .formGroup {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+  }
+  
+  .formGroup label {
+    font-weight: 400;
+    font-size: 16px;
+    color: #000;
+    margin-bottom: 5px;
+  }
+  
+  /* ✅ CSS 모듈에서는 전역 태그 사용 금지 → 클래스 추가 */
+  .formGroup input, 
+  .formGroup select {
+    padding: 12px 16px;
+    width: 100%;
+    border: 1px solid #D9D9D9;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #000;
+  }
+  
+  .formGroup input::placeholder {
+    color: #B3B3B3;
+  }
+  
+  .registerButton {
+    padding: 12px;
+    width: 100%;
+    background: #9747FF;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  .textDanger {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+  }
+  
+  .textSuccess {
+    color: green;
+    font-size: 14px;
+    margin-top: 5px;
+  }
+  .errorMessage {
+    color: red;
+    font-size: 14px;
+    text-align: center;
+  }
+  
+  /* ✅ 반응형 스타일 */
+  @media (max-width: 768px) {
+    .signupForm {
+        width: 70%;
+    }
+  
+    .logo {
+        font-size: 24px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .signupForm {
+        width: 90%;
+        padding: 15px;
+    }
+  
+    .logo {
+        font-size: 20px;
+    }
+  
+    .formGroup input, 
+    .formGroup select {
+        padding: 10px 12px;
+        font-size: 14px;
+    }
+  
+    .registerButton {
+        padding: 10px;
+        font-size: 14px;
+    }
+  }
